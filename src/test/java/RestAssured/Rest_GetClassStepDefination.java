@@ -21,8 +21,9 @@ public class Rest_GetClassStepDefination {
         String responseBody = response.getBody().asString();
         System.out.println("Response as " + responseBody);
         System.out.println("Header" + response.getHeaders());
-        System.out.println("Others "+ response.getHeader("Date"));
+        System.out.println("Reading specific value from Header "+ response.getHeader("Date"));
         System.out.println("Status Code as " +response.getStatusCode());
+        System.out.println("Another way of reading specific value from header "  + response.getHeader("Content-Type"));
         Assert.assertEquals("Received Status code is not equal" , 200, response.getStatusCode());
         Assert.assertEquals("Received status line is ", "HTTP/1.1 200 OK" , response.getStatusLine());
 
