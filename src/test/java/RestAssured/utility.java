@@ -1,6 +1,7 @@
 package RestAssured;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -45,6 +46,8 @@ public class utility {
 
     public String buildAPIGETMethod(String baseURI, String basePath) {
         RequestSpecification httpRequest = RestAssured.given();
+        httpRequest.header("Content-Type", "application/json");
+        httpRequest.accept(ContentType.JSON);
         if (basePath.equals("")) {
             response = httpRequest.get(baseURI);
         } else {
