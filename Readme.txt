@@ -29,3 +29,13 @@ Response response = httpRequest.request(Method.POST)
 //To read the specific from header
 response.jsonPath().get("message");
 */
+
+/**
+How to read the JSON
+JSONParser jsonparser = new JSONParser();
+Object object1 = jsonparser.parse(responseBody);
+Object object2 = ((JSONObject) object1).get("DATA TO RETRIVE");
+//For JSONArray
+JSONArray jsonarray = (JSONArray) ((JSONObject) object1).get("ARRY DATA TO RETRIVE");
+jsonarray.get(0);
+*/

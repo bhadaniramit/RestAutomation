@@ -2,6 +2,7 @@ package RestAssured;
 
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -23,6 +24,10 @@ public class Rest_PostClassStepDefination {
         utilityclass.readPropertiesFile(propertiesFilePath);
         postParam.putAll(utilityclass.readPropertiesFile(propertiesFilePath));
         httpRequest.header("Content-Type", "application/json");
+        httpRequest.auth().basic("Bearer Token", "");
+        httpRequest.auth().certificate("","");
+        httpRequest.contentType(ContentType.JSON);
+        httpRequest.accept(ContentType.JSON);
         httpRequest.body(postParam.toJSONString());
         Response response = httpRequest.request(Method.POST);
         System.out.println("Response " +response.statusCode());
