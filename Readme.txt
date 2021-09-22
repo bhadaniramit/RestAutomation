@@ -34,6 +34,7 @@ response.jsonPath().get("message");
 How to read the JSON
 JSONParser jsonparser = new JSONParser();
 Object object1 = jsonparser.parse(responseBody);
+//For Simple JSON Object
 Object object2 = ((JSONObject) object1).get("DATA TO RETRIVE");
 //For JSONArray
 JSONArray jsonarray = (JSONArray) ((JSONObject) object1).get("ARRY DATA TO RETRIVE");
