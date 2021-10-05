@@ -31,7 +31,7 @@ public class Rest_PostClassStepDefination {
         httpRequest.body(postParam.toJSONString());
         Response response = httpRequest.request(Method.POST);
         System.out.println("Response " +response.statusCode());
-        System.out.println("Response Body is " +response.getBody().asString());
+        System.out.println("Response Body is " +response.getBody().asPrettyString());
         System.out.println("Response Success Message " +response.jsonPath().get("message"));
     }
 }
