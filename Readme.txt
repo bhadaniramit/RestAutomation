@@ -1,3 +1,22 @@
+Rest Assured is Java Library used for testing RestFul Services
+It will be used for XML or JSON based services
+It will be integrated using Junit or TestNG
+RESTAssured is implemented in Groovy
+
+RestAssured is implemented using BDD Framework
+given  - body, SetCookies, Add Auth, add Param, query param, setheader
+when   - httprequest (get, post, put, delete)
+then   - response, statusCode
+
+Current version of Rest is 4.2.0
+
+Pre-requsities
+* Java
+* IDE (intellij, eclipse)
+* Maven
+* TestNG, Junit
+*
+
 In this Class, I have automated the first Rest Call.
 /*This is Get Call
 Importatant Points for GET Call:
